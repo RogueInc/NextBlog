@@ -1,0 +1,31 @@
+.blog {
+    height: 80%;
+    min-width: 35vw;
+    max-width: 35vw;
+    background-color: antiquewhite;
+    display: flex;
+  }
+  .blogimage{
+   width:60%;
+    background-color: aquamarine;
+    object-fit: fill;
+  }
+
+  .blogcontent{
+    width:40%;
+    background-color: aliceblue;
+    padding: 0.5em;
+  }
+  .link{
+    text-decoration: none;
+    color:#222;
+  }
+  .link:hover{
+    text-decoration:underline;
+  }
+  @media screen and (max-width: 850px){
+    .blog{
+      min-width: 70vw;
+      max-width: 80vw;
+    }
+  }
