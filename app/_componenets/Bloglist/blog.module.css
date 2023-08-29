@@ -1,20 +1,28 @@
-.blog {
+.blogpost {
     height: 80%;
     min-width: 35vw;
     max-width: 35vw;
     background-color: antiquewhite;
     display: flex;
   }
-  .blogimage{
+  .postimage{
    width:60%;
     background-color: aquamarine;
     object-fit: fill;
   }
 
-  .blogcontent{
+  .postcontent{
     width:40%;
     background-color: aliceblue;
     padding: 0.5em;
+    text-overflow: clip;
+    text-overflow: ellipsis;
+  }
+  .postcontent p{
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 50%;
   }
   .link{
     text-decoration: none;
@@ -23,9 +31,202 @@
   .link:hover{
     text-decoration:underline;
   }
+  
+  /* page style */
+
+  .blogs {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1000vh;
+    background-color: #040605;
+  }
+  /* .blogcontainer{
+      display: flex; 
+      overflow: hidden; 
+      position: sticky; 
+      top: 0; 
+      align-items: center; 
+      height: 100vh; 
+      display: flex;
+      height: 80vh;
+      gap:5%;
+      overflow: scroll;
+      margin-top: 2%;
+  } */
+  .blogbox {
+    display: flex;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+  }
+  .blogcontainer {
+    height: 90vh;
+    display: flex;
+    gap: 2.5rem;
+  }
+  .blog {
+    height: 80%;
+    min-width: 25vw;
+    background-color: antiquewhite;
+  }
+  .about {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .topdiv {
+    width: 80%;
+    height: 250px;
+    position: relative;
+    align-self: center;
+    left: 10%;
+  }
+  .aboutimage {
+    height: 20%;
+    filter: grayscale(100%);
+    z-index: 0;
+    object-fit: cover;
+  }
+  .imagehead {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    color: #fff;
+    /* background: linear-gradient(to right,#fff,transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 2em;
+  }
+  .content {
+    margin: 0;
+    padding: 0;
+    width: 85%;
+    position: relative;
+    left: 7.5%;
+    color: #fff;
+    display: flex;
+  }
+  .content h1 {
+    font-size: 2em;
+    background: linear-gradient(to right, #fff, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .contentleft {
+    flex: 3;
+    padding: 2.5em;
+  }
+  .contentright {
+    flex: 2;
+    padding: 2.5em;
+  }
+  .contentright p {
+    font-size: 1.4em;
+  }
+  .contentleft p {
+    font-size: 1.1em;
+  }
+  .contentright ul {
+    list-style: none;
+  }
+  /* third section */
+  .lastreveal {
+    color: #fff;
+    height: 100vh;
+  }
+  .emptyblock {
+    height: 700vh;
+  }
+  .revealcontent {
+    height: 100vh;
+    display: flex;
+  }
+  .leftcontent {
+    flex: 2;
+    padding: 2em;
+  }
+  .leftcontent p{
+    font-size: 2em;
+    padding: 0.2em;
+  }
+  .leftcontent h1 {
+    font-size: 6em;
+    background: linear-gradient(to right, #fff, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .rightcontent {
+    flex: 2;
+  }
+  
+  .rightcontent {
+    flex: 3;
+    padding: 2em;
+  }
+  .rightcontent p{
+    font-size: 2em;
+    padding: 0.2em;
+  }
+  .rightcontent h1 {
+    font-size: 6em;
+    background: linear-gradient(to right, #fff, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .revealsocial{
+    display: flex;
+    gap:2em;
+  }
+  
+  /* mobile responsive */
   @media screen and (max-width: 850px){
-    .blog{
+    .about{
+      height:200vh;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+    }
+    .blogs{
+      height:1200vh;
+    }
+    .emptyblock{
+      height: 800vh;
+    }
+    .revealcontent{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin:0;
+    }
+    .leftcontent{
+      width: 100%;
+      flex: 2;
+      padding: 0 2em;
+      font-size: 0.6em;
+    }
+    .rightcontent{
+      width: 100%;
+      flex: 2;
+      padding: 0 1.8em;
+      font-size: 0.4em;
+    }
+    .leftcontent p{
+      font-size: 2.4em;
+    }
+
+    /* blog  */
+    .blogpost{
       min-width: 70vw;
       max-width: 80vw;
     }
+  
   }

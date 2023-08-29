@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
+
   return (
     <section className={styles.hero}>
       <div className={styles.left}>
@@ -13,7 +14,7 @@ export default function Home() {
             Explore, Engage, Evolve: Your Journey Starts Here.
           </h1>
           <h1 className={styles.smallheading}>Unlocking Inspiration, One Word at a Time.</h1>
-          <Link href='/blogs'><button className={styles.about}>Explore</button></Link>  
+          <Link href='/blogs'><button className={styles.about}>Explore</button></Link>
       </div>
     </section>
   );
