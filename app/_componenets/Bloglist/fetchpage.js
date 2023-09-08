@@ -18,14 +18,14 @@ export default function BlogDetails() {
         className={styles.SinglePost}
       >
         <div className={styles.leftdiv}>
-          <img src={posts[par.id - 1].Image} className={styles.leftimg} />
+          <img src={[par.id - 1]<10?posts[par.id - 1].Image:posts[1].Image} className={styles.leftimg} />
         </div>
         <div className={styles.rightdiv}>
           <div className={styles.title}>
-            <h1>{posts[par.id - 1].Title}</h1>
-            <h2>-{posts[par.id - 1].Author}</h2>
+            <h1>{[par.id - 1]<10?posts[par.id - 1].Title:posts[1].Title}</h1>
+            <h2>-{[par.id - 1]<10?posts[par.id - 1].Author:posts[1].Author}</h2>
           </div>
-          <div className={styles.content}>{posts[par.id - 1].content}</div>
+          <div className={styles.content}>{[par.id - 1]<10?posts[par.id - 1].content:posts[1].content}</div>
         </div>
       </motion.section>
       {/* <h1>ID:{posts[par.id-1].id}</h1>
